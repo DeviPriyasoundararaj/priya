@@ -1,0 +1,459 @@
+(1). How to compare two JSON have the same properties without order?
+a. var obj1 = { name: "Person 1", age:5 };
+b. var obj2 = { age:5, name: "Person 1" };
+answer:-
+var obj1={name:"person1",age:5};
+var obj2={age:5,name:"person"};
+if(JSON stringify(obj1)===JSON.stringify(obj2)){
+console.loig("JSON have the same propreties");
+}else{
+console.log("JSON are not have the same properties");
+}
+
+
+(2).Use the rest api and display the all country flag in console.
+CODE:-
+Var = new XMLHttpRequest();
+url.open =(’GET’,“https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json”);
+xhr.onload = function(){
+if(xhr.status>=250 && xhr.status<=300){
+var data=JSON.parse(this.responceText);
+//console.log(data);
+For(let i=0;i<data.length;i++){
+Console.log(data[i].flag);
+}
+} else{
+Console.log(xhr.responseText);
+}
+};
+Xhr.send();
+
+
+(3)Use the rest country API and display all country population,name,sub-region 
+and region .
+//set up a http request object
+var xhr = new XMLHttpRequest();
+xhr.open('GET',"https://raw.githubusercontent.com/rvsp/restcountries-jsondata/master/res-countries.json");
+xhr.onload = function() {
+ if(xhr.status >=250 && xhr.status< 300){
+ var data =JSON.parse(this.responseText);
+ console.log(data);
+ for(let i=0; i<data.length; i++){
+console.log(data[i].name,data[i].region,data[i].sub-region,data[i].population);
+}}
+Else{
+Console.log(xhr.responceText);
+}
+};
+xhr.send();
+
+(4).Pratice :- Different Different Functions
+Q-4 
+Ans:-
+For practice:-
+1.var myvar= 1;
+console.log("myvar");
+
+2.
+let personData=[
+{ 
+ firstname:"Adelia",
+ lastname:"Priya", 
+ Hobbies:"Listening to music,reading books,travelling";
+ Age:20,
+ Country:"india",
+}
+]
+console.log(personData);
+
+
+3.Null type
+The Null type has exactly one value: null. See null and Null for more details.
+
+
+Undefined type
+A variable that has not been assigned a value has the value undefined.see
+undefined and Undefined for more details.
+
+
+Numeric types
+ECMAScript has two built-in numeric types: Number and BigInt — along with the 
+related value NaN.
+let let num = 16; 
+let lastName = "Adelia"; 
+let x = {firstName:"Adelia", lastName:"priya"}; 
+
+
+4.Convert mathod:-
+parseInt("60.5") 
+parseInt(22 year) 
+parseInt("He was 22") 
+parseInt("45.25") 
+parseInt("20.00") 
+
+5.
+1.ParseInt-code
+myString = '111' 
+console.log(parseInt(myString))
+
+
+2.using number()-code
+a = 14.22
+console.log(parseInt(a)) 
+Number("15"); 
+Number(" 25 "); 
+Number("98.30"); 
+3.unary()-code
+const x = 25;
+const y = -25;
+console.log(+x); 
+console.log(+y); 
+console.log(+''); 
+4.Convert mathod:-
+parseInt("60.5") 
+parseInt(22 year) 
+parseInt("He was 22") 
+parseInt("45.25")
+parseInt("20.00") 
+5.
+1.ParseInt-code
+myString = '111' 
+console.log(parseInt(myString)) 
+
+2.using number()-code
+a = 14.22
+console.log(parseInt(a)) 
+Number("15"); 
+Number(" 25 "); 
+Number("98.30");
+
+
+3.unary()-code
+const x = 25;
+const y = -25;
+console.log(+x); 
+console.log(+y); 
+console.log(+''); 
+
+4.Convert mathod:-
+parseInt("60.5") 
+parseInt(22 year) 
+parseInt("He was 22")
+parseInt("45.25") 
+parseInt("20.00")
+
+5.
+1.ParseInt-code
+myString = '111' 
+console.log(parseInt(myString)) 
+
+
+2.using number()-code
+a = 14.22
+console.log(parseInt(a)) 
+Number("15"); 
+Number(" 25 "); 
+Number("98.30");
+
+
+3.unary()-code
+const x = 25;
+const y = -25;
+console.log(+x); 
+console.log(+y); 
+console.log(+''); 
+
+
+6. True & False
+// all false
+5 === '5';
+9 === [9];
+'3' === [3];
+//all true
+8 == '8
+11 == [11];
+'20' == [20];
+
+
+7. square of number-code
+let x = Math.pow(5, 2);
+
+
+8. swaping of 2 number-code
+function swap(x, y) {
+ return [y, x];
+}
+console.log(swap(2, 3)); 
+
+
+9.Addition of 3 numbers-code
+let a=5;
+let b=4;
+let c=5;
+console.log(a+b+c); //O.p 14
+
+
+10. F` to C`-code
+function temperatureConverter(valNum) {
+ valNum = parseFloat(valNum);
+ document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+ }
+ 
+ 11.Meter to miles-code
+#Taking user input
+km = float(input("Enter value in kilometers: "))
+#Conversion factor
+cf = 0.621371
+#Calculate miles
+miles = km * cf
+#Print the output
+print('%0.2f kilometers is equal to %0.2f miles' %(kilometers,miles))
+
+
+12.Pounds to kg-code
+function weightConverter(valNum) {
+ document.getElementById("outputGrams").innerHTML = valNum / 0.0022046;
+}
+
+
+13.Calculate Batting Average-code
+var sum = array.reduce((a, b) => a + b, 0);
+var avg = (sum / array.length) || 0; 
+
+14.Calculate five test scores and print their average-code
+var alpha = [['A', 80], ['B', 77], ['C', 88], ['D', 95], ['E', 68]];
+var Avgmarks = 0;
+for (var i=0; i < students.length; i++) {
+ Avgmarks += students[i][1];
+ var avg = (Avgmarks/alpha.length);
+}
+console.log("Average grade: " + (Avgmarks)/alpha.length);
+ if (avg < 60){
+ console.log("Grade : F"); 
+ } 
+ else if (avg < 70) {
+ console.log("Grade : D"); 
+ } 
+ else if (avg < 80) 
+ {
+ console.log("Grade : C"); 
+ } else if (avg < 90) {
+ console.log("Grade : B"); 
+ } else if (avg < 100) {
+ console.log("Grade : A"); 
+}
+
+
+15.code for square
+x^y =?
+let b=Math.pow(5,9);
+
+
+16.Calculate Simple Interest-code
+const simpleInterest = document.querySelector('.simple-interest');
+const button = document.querySelector('.button');
+//const loading = document.querySelector('.loader');
+const results = document.querySelector('.results');
+function calculateResults(e) {
+// ui elements
+const principal = document.querySelector('#principal');
+const rate = document.querySelector('#rate');
+const time = document.querySelector('#time');
+const monthlyPayment = document.querySelector('#payment');
+const totalInterest = document.querySelector('#interest');
+const totalAmount = document.querySelector('#total');
+// formula variables
+const p = parseFloat(principal.value);
+const r = parseFloat(rate.value);
+const t = parseFloat(time.value);
+// calculate total interest
+const interest = (p*t*r/100);
+// calculate monthly payment
+const payment = ((interest + p) / (t * 12)).toFixed(2);
+// calculate total amount paid
+const total = (interest + p).toFixed(2);
+if (isFinite(payment)) {
+totalInterest.innerHTML = '$' + (interest).toFixed(2);
+monthlyPayment.innerHTML = '$' + payment;
+totalAmount.innerHTML = '$' + total;
+// hide loader
+button.classList.remove('loading');
+// show results
+results.classList.remove('hide');
+} else {
+// show error
+showError('Please check your numbers and try again.');
+// hide loader
+button.classList.remove('loading');
+}
+}
+function showError(error) {
+// create error
+const errorMessage = document.createElement('div');
+const calculate = document.querySelector('#calculate');
+errorMessage.className = 'error';
+errorMessage.appendChild(document.createTextNode(error));
+simpleInterest.insertBefore(errorMessage, calculate);
+// clear error
+setTimeout(clearError, 3000);
+}
+function clearError() {
+// remove error
+document.querySelector('.error').remove();
+}
+button.addEventListener('click', (e) => {
+console.log('Calculating...');
+// show loader
+button.classList.add('loading');
+// set timeout
+setTimeout(calculateResults, 2000);
+// prevent page from reloading on submit
+e.preventDefault();
+});
+
+
+17.Find the area of triangle-code
+const baseValue = prompt('Enter the base of a triangle: ');// 6
+const heightValue = prompt('Enter the height of a triangle: ');//4
+// calculate the area
+const areaValue = (baseValue * heightValue) / 2;//12
+console.log(
+ `The area of the triangle is ${areaValue}`
+);
+
+
+ 18.Area Of Isosceles Triangle-Code
+<script>
+// Javascript program to find the Altitude
+// Area of an isosceles triangle
+// function to find the altitude
+function altitude(a,b)
+{
+// return altitude
+return Math.sqrt(Math.pow(a, 2) - (Math.pow(b, 2) / 4));
+}
+// function to find the area
+function area( b, h)
+{
+// return area
+return (1 * b * h) / 2;
+}
+// Main code
+let a = 2, b = 3;
+let h = altitude(a, b);
+document.write("Altitude= " + h.toFixed(2) + ", ");
+document.write( "Area= " + area(b, h).toFixed(2));
+
+
+19.volume of sphere-code
+function calc(){
+ let number=document.getElementById("radius").value;
+ number=Number(number);
+ // The formula for the volume of a sphere (4. π. r*r*r )/ 3
+ let sphere=(4*Math.PI*number*number*number)/3;
+ //Cut the floating digits to two float
+ sphere =sphere .toFixed(2);
+ alert("The volume of a sphere: "+sphere);
+}
+ 
+let btnCalc=document.getElementById("btnCalc");
+btnCalc.onclick=calc;
+
+
+20.Volume Of Prism-code
+// function to find the Volume
+// of triangular prism
+function findVolume( l, b, h)
+{
+// formula to find Volume
+let volume = (l * b * h) / 2;
+return volume;
+}
+// Main Code
+let l = 18, b = 12, h = 9;
+// function calling
+document.write( "Volume of triangular prism: " + findVolume(l, b, h));
+
+21.Find area of triangle-code
+//JavaScript Program To Calculate The Area of a Triangle
+var base = parseInt(prompt("Enter the base: "));
+var height = parseInt(prompt("Enter the height: "));
+//Calculating the area
+var area = (base * height) / 2;
+//Display Output
+console.log("Base: " + base);
+console.log("Height: " + height);
+console.log("The area of the triangle is " + area);
+
+22.Give the Actual cost and Sold cost, Calculate Discount Of Product-code
+ getPrice = function() {
+ var numVal1 = Number(document.getElementById("price").value);
+ var numVal2 = Number(document.getElementById("discount").value) / 
+100;
+ var totalValue = numVal1 - (numVal1 * numVal2)
+ document.getElementById("total").value = totalValue.toFixed(2);
+ }
+ 
+ 23.Given their radius of a circle and find its diameter, circumference and area.
+code:-
+function circle(radius)
+{
+ this.radius = radius;
+ // area method
+ this.area = function () 
+ {
+ return Math.PI * this.radius * this.radius;
+ };
+ // perimeter method
+ this.perimeter = function ()
+ {
+ return 2*Math.PI*this.radius;
+ };
+}
+var c = new circle(3);
+console.log('Area =', c.area().toFixed(2));
+console.log('perimeter =', c.perimeter().toFixed(2));
+
+
+24.Given two numbers and perform all arithmetic operations:-code
+1)
+Math.round(a) Returns a rounded to its nearest integer.
+2)
+Math.ceil(b) Returns b rounded up to its nearest integer.
+3)
+Math.floor(c) Returns c rounded down to its nearest integer.
+4)
+Math.trunc(d) Returns the integer part of d.
+5)
+Math.round(4.6) returns the nearest integer.//o.p=5
+
+
+
+6)
+Math.ceil(5.9) returns the value of x rounded up to its nearest integer://o.p=6
+7)
+Math.floor(4.2) returns the value of x rounded down to its nearest integer://0.p=4
+8)
+Math.pow(5, 5) returns the value of x to the power of y://o.p=3125//5^5
+9)
+Math.sqrt(25) returns the square root of x://o.p=5
+10)
+Math.min() and Math.max() can be used to find the lowest or highest value in a 
+list of arguments:
+11)
+Math.random() returns a random number between 0 (inclusive), and 1 
+(exclusive):
+12)
+Math.log(f) returns the natural logarithm of x.
+13)
+Math.log2(g) returns the base 2 logarithm of x.
+14)
+Math.log10(h) returns the base 10 logarithm of x.
+15)
+Math.abs(i) returns the absolute (positive) value of x:
+16)
+Math.sin(x) returns the sine (a value between -1 and 1) of the angle x (given in 
+radians).
+17)
+Math.cos(x) returns the cosine (a value between -1 and 1) of the angle x (given in radians).
+
